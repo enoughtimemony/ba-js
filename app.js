@@ -1,4 +1,7 @@
-//different
+const title = document.getElementById("title");
+
+console.log(title);
+
 let realName = "태혁";
 console.log(realName);
 
@@ -87,3 +90,75 @@ const cal = {
 
 cal.add(100, 20);
 cal.minus(200, 100);
+
+const calculate = {
+  plus: function (a, b) {
+    console.log(a + b);
+  },
+  minus: function (a, b) {
+    console.log(a - b);
+  },
+  double: function (a, b) {
+    console.log(a * b);
+  },
+  divide: function (a, b) {
+    console.log(a / b);
+  },
+  power: function (a, b) {
+    console.log(a ** b);
+  },
+};
+
+calculate.plus(10, 20);
+calculate.minus(200, 100);
+calculate.double(20, 30);
+calculate.divide(50, 10);
+calculate.power(2, 3);
+
+const year = 96;
+function calculateKrAge(ageOfForeigner) {
+  return ageOfForeigner + 2;
+}
+
+const krAge = calculateKrAge(year);
+console.log(krAge);
+
+const calculating = {
+  plus: function (a, b) {
+    return a + b;
+  },
+  minus: function (a, b) {
+    return a - b;
+  },
+  double: function (a, b) {
+    return a * b;
+  },
+  divide: function (a, b) {
+    return a / b;
+  },
+  power: function (a, b) {
+    return a ** b;
+  },
+};
+
+const plusResult = calculating.plus(2, 3);
+const minusResult = calculating.minus(plusResult, 10);
+const doubleResult = calculating.double(minusResult, 5);
+const divideResult = calculating.divide(doubleResult, plusResult);
+const powerResult = calculating.power(doubleResult, 3);
+
+const age = parseInt(prompt("How old are you?"));
+
+if (isNaN(age) || age < 0) {
+  console.log("Please write a real positive numeber");
+} else if (age < 18) {
+  console.log("You are too young");
+} else if (age >= 18 && age <= 50) {
+  console.log("you can drink");
+} else if (age > 50 && age <= 80) {
+  console.log("You should exercise");
+} else if (age === 100) {
+  console.log("Wow you are wise");
+} else if (age > 80) {
+  console.log("You can do whatever you want");
+}
